@@ -5,10 +5,11 @@ Rails.application.routes.draw do
   root "welcome#index"
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
+  get "/signup", to: "signup#show"
 
 
   #RESTful Routes
-  resources :guides, only: [:index]
+  resources :guides, only: [:new, :index]
   resources :cities, only: [:index]
   resources :users, only: [:new]
 end

@@ -16,8 +16,10 @@ describe "visitor sees homepage with all correct elements" do
     it "can click on Create Account and is taken to a page that has links to sign up as Guide or Guidee" do 
       click_link "Create Account"
 
-      expect(current_path).to eq new_user_path
+      expect(current_path).to eq signup_path
 
+      expect(page).to have_content "Choose Your Account Type"
+      
       expect(page).to have_link "Become a Guide"
       expect(page).to have_link "Find a Guide"
     end
