@@ -39,6 +39,8 @@ group :development, :test do
   gem 'pry'
   gem 'factory_bot_rails'
   gem 'shoulda'
+  gem 'devise'
+  gem 'omniauth'
 end
 
 group :development do
